@@ -1,0 +1,32 @@
+# Shipnote の設定。Pages の LP (/projects/<slug>/) に出す内容。
+# 書き換えたら `shipnote sync` で反映する。
+
+name = "PortWho"
+github = "lancard-aikawa/PortWho"
+# slug = "portwho"   # LP の URL。省略すると name から作る
+
+# 一行の紹介 (トップの一覧と LP の見出し下に出る)
+tagline = "どのポートをどのプロセスが使っているかを確認して kill する単体 GUI ツール"
+
+# 二〜四文の説明
+description = "開発サーバーがポートを掴んだまま残ったとき、ポート番号やプロセス名から素早く特定して終了させるための小物です。リッスン中のポートを一覧で見ながら、ポート番号・プロセス名・コマンドラインでフィルタして目的の行を探せます。PortWho 自身はポートを使わず netstat と CIM の出力を表示するだけなので、ポートを使う他のツールと干渉しません。"
+
+features = [
+  "リッスン中のポートを一覧表示 (ポート / Proto / PID / 種別 / プロセス名 / 開く / コマンドライン)",
+  "ポート番号・プロセス名・コマンドラインでのインクリメンタルフィルタと、種別 / Web のセレクトボックス絞り込みを AND で併用",
+  "node / bun / deno / python / dart / go / java / php / ruby / .NET を色チップと太字で強調表示",
+  "HTTP を喋るポートに「開く ↗」を表示し、クリックで http://localhost:PORT をブラウザで開く",
+  "行を選んでプロセスツリーごと kill (誤操作防止のためボタン経由のみ)、列ヘッダでソート・自動更新トグル",
+]
+
+# 動く環境 (例: "Windows 10 / 11")
+platforms = "Windows / Unix (exe ビルドは Windows)"
+
+# リポジトリ内の画像のパス。LP に並ぶ
+screenshots = []
+
+# false にするとトップの一覧から外す (LP とリリース記録は作る)
+listed = true
+
+# false にすると一覧と LP だけ載せ、リリース記録 (/posts/) は作らない (作ってあったものは消す)
+posts = false
